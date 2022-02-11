@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> paint board </title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+
+<body>
+  <canvas id="jsCanvas" class="canvas"> </canvas>
+  <div class="controls">
+    <div class="controls__range">
+      <input type="range" id="jsRange" min="0.1" max="5.0" value="2.5" step="0.1"/>
+    </div>
+    <div class="controls__btns">
+      <button id="jsMode">fill</button>
+      <button id="jsMode">save </button>
+    </div>
+    <div id="jsColors" class="control__colors">
+      <div class="controls__color" style="background: #2c2c2c"></div>
+      <div class="controls__color" style="background: #ffffff"></div>
+      <div class="controls__color" style="background: #ff3b30"></div>
+      <div class="controls__color" style="background: #ff9500"></div>
+      <div class="controls__color" style="background: #ffcc00"></div>
+      <div class="controls__color" style="background: #4cd963"></div>
+      <div class="controls__color" style="background: #5ac8fa"></div>
+      <div class="controls__color" style="background: #0579ff"></div>
+      <div class="controls__color" style="background: #5856d6"></div>
+    </div>
+  </div>
+</body>
+
+</html>
