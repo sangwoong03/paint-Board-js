@@ -84,3 +84,42 @@ style.css의 각 class 속성 중 주요 속성이나 새로 배운 부분 위�
     각각의 자식요소(".p1", ".p2")의 자손요소(".c1",".c2")를 `display: flex`로 수평 정렬을 하였다. 
 
     최상위 부모 요소 (".gp")에서 `display: flex; flex-direction: column`을 할 경우 자식 요소들이 block 형태로 수직 (cloumn) 정렬 되고, 자손 요소들은 수평 정렬된다.
+
+    
+<br> 
+
+## 3. Javascript  
+---
+<br>
+
+1.  CANVAS DOM 다루기
+
+    ``` javascript
+        const canvas = document.querySelector(".canvas");
+        canvas.width = 700;
+        canvas.height = 700;
+        // canvas 요소의 너비와 높이 지정
+        // html 내부 요소로 있으면 지정하지 않아도 적용됨.
+        // ex) <canvas class="canvas" width="700px;" height="700px"> </canvas>
+
+        // context는 canvas의 픽셀에 접근할 수 있는 속성
+        // canvas 요소에 동적 요소 추가 가능
+        const ctx = document.getContext("2d");
+        ctx.strokeStyle // canvas 내부 line에 스타일 적용 (색상 등)
+        ctx.lineWidth // canvas 내부 line의 굵기 조절
+        ctx.fillStyle // canvas의 색상 변경
+        ctx.fillRect // 
+        
+        ctx.beginPath
+        ctx.closePath
+        ctx.moveTo
+        ctx.lineTo
+    ```
+
+(22. 02. 14 22:17부 마무리 >> 수정 필요)  
+
+2. 그리기
+3. 색상 조절
+4. 크기 조절
+5. 배경색 채우기
+6. 이미지 저장
