@@ -2,6 +2,7 @@ const colors = document.querySelectorAll(".controls__color");
 const range = document.querySelector("#jsRange");
 const canvas = document.querySelector(".canvas");
 const mode = document.querySelector("#jsMode");
+const save = document.querySelector("#jsSave");
 
 const ctx = canvas.getContext("2d");
 
