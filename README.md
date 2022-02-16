@@ -1,5 +1,5 @@
 # 노마크코더 - 그림판(JS) 만들기   
-`공부기간: 22. 02. 11 ~ 진행 중`
+`공부기간: 22. 02. 11 ~ 22. 02. 16`
   
 <br>
 
@@ -211,5 +211,22 @@ style.css의 각 class 속성 중 주요 속성이나 새로 배운 부분 위�
     ``` javascript
         const save = document.querySelector("#jsSave");
         
+        save.onclick = () => {
+            const image = canvas.toDataURL(); // canvas 데이터 img 파일로 전환 default: png, "image/JPEG": jpg
+            const link = document.createElement("a");
+
+            link.href = image; // image를 html a태그의 경로로 지정
+            link.download = "paintJs"; // 다운로드 파일 이름 지정
+            link.click();
+        }
+    ```
+    캔버스를 우클릭하여 이미지를 저장할 수 있음.  
+    위 이미지 저장 기능을 위해 이를 방지하는 이벤트 적용
+    ``` javascript
+        const canvas = document.querySelector("canvas");
+
+        //contextMoues eventListener
+        canvas.oncontextmouse = (e) => {
+            e.preventDefault();
         }
     ```

@@ -12,6 +12,10 @@ const CANVAS_SIZE = 700;
 canvas.width = CANVAS_SIZE;
 canvas.height = CANVAS_SIZE;
 
+// canvas background color intialization
+ctx.fillStyle = "white";
+ctx.fillRect(0, 0, CANVAS_SIZE, CANVAS_SIZE);
+
 ctx.strokeStyle = INITAIL_COLOR;
 ctx.lineWidth = 2.5;
 ctx.fillStyle= INITAIL_COLOR;
@@ -50,6 +54,11 @@ canvas.onmouseleave = () => {
   painting = false
 };
 
+// eventListener > hide context menu
+canvas.oncontextmenu = (e) => {
+  e.preventDefault();
+}
+
 // handle the color of the pen
 function handleColor(e) {
     const color = e.target.style.backgroundColor;
@@ -80,4 +89,14 @@ canvas.onclick = () => {
   if (filling) {
     ctx.fillRect(0, 0, CANVAS_SIZE, CANVAS_SIZE);
   } 
+}
+
+// save the image file from canvas to jpg or png file
+save.onclick = () => {
+  // canvas data transfer to image
+  const image = canvas.toDataURL();
+  const link = document.createElement("a");
+  link.href = image;
+  link.download = "paintJs";
+  link.click();
 }
